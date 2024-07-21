@@ -8,12 +8,8 @@ const DisplaySnippets = () => {
 
   const fetchSnippets = async () => {
     try {
-      const response = await axios.get('https://codesnips-back-vishesh-nagars-projects.vercel.app/snippets');
-      if (Array.isArray(response.data)) {
-        setSnippets(response.data);
-      } else {
-        throw new Error('Response is not an array');
-      }
+      const response = await axios.get('https://codesnips-back-7f71vso2d-vishesh-nagars-projects.vercel.app/snippets');
+      setSnippets(response.data);
     } catch (error) {
       setError('Error fetching snippets.');
       console.error('There was an error fetching the snippets!', error);
