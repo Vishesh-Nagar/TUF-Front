@@ -1,7 +1,7 @@
 import React from 'react';
 import SubmitForm from './components/SubmitForm';
 import DisplaySnippets from './components/DisplaySnippets';
-import './App.css'; // Import the CSS file
+import './App.css';
 
 const App = () => {
   return (
