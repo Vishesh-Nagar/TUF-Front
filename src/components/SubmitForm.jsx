@@ -10,10 +10,11 @@ const SubmitForm = () => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const snippetData = { username, codeLanguage, stdin, sourceCode };
+
     try {
-      await axios.post('https://codesnips-back-7f71vso2d-vishesh-nagars-projects.vercel.app/submit', snippetData);
+      await axios.post('https://codesnips-back-vishesh-nagars-projects.vercel.app/submit', snippetData);
       setMessage('Snippet submitted successfully!');
       setUsername('');
       setCodeLanguage('');
@@ -34,10 +35,12 @@ const SubmitForm = () => {
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          required
         />
         <select
           value={codeLanguage}
           onChange={(e) => setCodeLanguage(e.target.value)}
+          required
         >
           <option value="">Select Language</option>
           <option value="C++">C++</option>
@@ -54,6 +57,7 @@ const SubmitForm = () => {
           placeholder="Source Code"
           value={sourceCode}
           onChange={(e) => setSourceCode(e.target.value)}
+          required
         />
         <button type="submit">Submit Snippet</button>
       </form>
