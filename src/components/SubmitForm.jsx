@@ -13,7 +13,7 @@ const SubmitForm = () => {
     e.preventDefault();
     const snippetData = { username, codeLanguage, stdin, sourceCode };
     try {
-      await axios.post('https://codesnips-back.vercel.app/submit', snippetData);
+      await axios.post('https://codesnips-back-vishesh-nagars-projects.vercel.app/submit', snippetData);
       setMessage('Snippet submitted successfully!');
       setUsername('');
       setCodeLanguage('');
