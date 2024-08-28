@@ -8,7 +8,7 @@ const DisplaySnippets = () => {
 
   const fetchSnippets = async () => {
     try {
-      const response = await axios.get('https://codesnips-back.vercel.app/snippets');
+      const response = await axios.get('https://tuf-back.onrender.com/snippets');
       setSnippets(response.data);
     } catch (error) {
       setError('Error fetching snippets.');
